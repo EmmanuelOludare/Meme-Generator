@@ -12,10 +12,8 @@ function App() {
 
   return (
     <div className="App" data-theme={theme}>
-      <div className="main">
-        <Header switchTheme={switchTheme}/>
-        <Meme/>
-      </div>
+      <Header switchTheme={switchTheme}/>
+      <Meme/>
     </div>
   )
 }

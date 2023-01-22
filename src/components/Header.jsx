@@ -4,7 +4,7 @@ const Header = (props) => {
     return (
         <header className="header">
             <img 
-                src="./src/images/troll-face.webp" 
+                src="./src/images/troll-face.jpg" 
                 className="header--image"
             />
             <h2 className="header--title">Meme Generator</h2>

@@ -1,11 +1,9 @@
 :root {
-  --body-bg: #242424;
   --text-color: #fff;
   --main-bg: #fff;
 }
 
 [data-theme="dark"] {
-  --body-bg: #fff;
   --text-color: #242424;
   --main-bg: #242424;
 }
@@ -22,16 +20,11 @@ body {
   font-family: "Karla", sans-serif;
   font-weight: 700;
   font-size: 1.15rem;
+  color: var(--text-color);
+  background-color: beige;
 }
 
 .App {
-  color: var(--text-color);
-  background-color: var(--body-bg);
-  display: flex;
-  min-height: 100vh;
-}
-
-.main {
   max-width: 550px;
   position: absolute;
   margin: auto;
