@@ -9,7 +9,7 @@ const Header = (props) => {
                 className="header--image"
             />
             <h2 className="header--title">Meme Generator</h2>
-            <FaToggleOn onClick={props.switchTheme} className="toggle"/>
+            <label onClick={props.toggle} id="toggle"></label>
         </header>
     )
 }

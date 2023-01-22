@@ -4,15 +4,17 @@ import './App.css'
 import useLocalStorage from 'use-local-storage'
 
 function App() {
-  const [theme, setTheme] = useLocalStorage('theme' ? 'dark': 'light')
-    const switchTheme= () => {
-    const newTheme = theme === 'light' ? 'dark': 'light';
-        setTheme (newTheme)
-    }
+    const toggle = () => {
+      document.getElementById("toggle").classList.toggle("active");
+      document.querySelector(".App").classList.toggle("night");
+      document.querySelector(".header--title").classList.toggle("night--text");
+      document.querySelector(".form--button").classList.toggle("night--text");
+      document.querySelector(".download--button").classList.toggle("night--text");
+  }
 
   return (
-    <div className="App" data-theme={theme}>
-      <Header switchTheme={switchTheme}/>
+    <div className="App">
+      <Header toggle={toggle}/>
       <Meme/>
     </div>
   )

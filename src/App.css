@@ -1,15 +1,3 @@
-:root {
-  --text-color: #fff;
-  --invert-color: #242424;
-  --main-bg: #fff;
-}
-
-[data-theme="dark"] {
-  --text-color: #242424;
-  --invert-color: #fff;
-  --main-bg: #242424;
-}
-
 *,
 *::after,
 *::before {
@@ -22,7 +10,6 @@ body {
   font-family: "Karla", sans-serif;
   font-weight: 700;
   font-size: 1.15rem;
-  color: var(--text-color);
   background-color: beige;
 }
 
@@ -32,9 +19,10 @@ body {
   margin: auto;
   right: 0;
   left: 0;
-  background-color: var(--main-bg);
   min-height: 100vh;
-  transition: all 0.5;
+  transition: all 0.4s;
+  color: black;
+  background: black;
 }
 
 main {
@@ -45,8 +33,7 @@ main {
   display: flex;
   align-items: center;
   height: 65px;
-  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
-  color: var(--text-color);
+  background: linear-gradient(90deg, #a626d3 100%, #672280 1.18%);
   padding: 20px;
 }
 
@@ -58,13 +45,50 @@ main {
 .header--title {
   font-size: 1.25rem;
   margin-right: auto;
+  color: black;
 }
 
-.toggle {
-  font-size: 1.5rem;
-  font-weight: 500;
+#toggle {
+  position: absolute;
+  height: 20px;
+  width: 40px;
+  right: 60px;
+  top: 20px;
+  border: solid 2px white;
+  border-radius: 20px;
+}
+
+#toggle:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 1px;
+  top: 1px;
+  border: solid 2px white;
+  border-radius: 50%;
   cursor: pointer;
-  color: var(--invert-color);
+  background-color: white;
+  transition: 0.4s;
+}
+
+#toggle.active {
+  border-color: black;
+}
+
+#toggle.active:before {
+  left: 21px;
+  background-color: black;
+  border-color: black;
+}
+
+.night {
+  color: white;
+  background: white;
+}
+
+.night--text {
+  color: white;
 }
 
 .form {
@@ -85,10 +109,14 @@ main {
   grid-column: 1 / -1;
   font-family: "Karla", sans-serif;
   border-radius: 5px;
-  background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
-  color: var(--text-color);
+  background: linear-gradient(90.41deg, #a818da 100%, #711f8d 1.14%);
+  color: black;
   border: none;
   cursor: pointer;
+}
+
+.form--button.night--text {
+  color: white;
 }
 
 .meme {
@@ -109,7 +137,7 @@ main {
   margin: 15px 0;
   padding: 0 5px;
   font-family: impact, sans-serif;
-  font-size: 2em;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: white;
   letter-spacing: 1px;
@@ -129,8 +157,8 @@ main {
 .download--button {
   font-family: "Karla", sans-serif;
   border-radius: 5px;
-  background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
-  color: var(--text-color);
+  background: linear-gradient(90.41deg, #a818da 100%, #711f8d 1.14%);
+  color: black;
   border: none;
   cursor: pointer;
   padding: 15px;
@@ -140,4 +168,8 @@ main {
   justify-content: center;
   gap: 5px;
   margin-top: 5px;
+}
+
+.download--button.night--text {
+  color: white;
 }
