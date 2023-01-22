@@ -1,5 +1,6 @@
 import React, { useRef, useState,useEffect } from 'react';
 import html2canvas from 'html2canvas';
+import { FaDownload } from "react-icons/fa";
 
 const Meme = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -9,7 +10,7 @@ const Meme = () => {
   const [meme, setMeme] = useState({
     topText: "",
     bottomText: "",
-    randomImage: "http://i.imgflip.com/1bij.jpg" 
+    randomImage: "https://i.imgflip.com/2xscjb.png" 
   })
   const [allMemes, setAllMemes] = useState([])
 
@@ -28,7 +29,7 @@ const Meme = () => {
       });
       const link = document.createElement('a');
       link.href = canvas.toDataURL();
-      link.download = 'element.png';
+      link.download = 'meme.png';
       document.body.appendChild(link);
       link.click();
       link.remove();
@@ -90,7 +91,7 @@ const Meme = () => {
             {isDownloading ? (
               <p>Downloading...</p>
             ) : (
-              <button className="form--button" onClick={handleDownload}>Download Element</button>
+              <button className="download--button" onClick={handleDownload}>Download Meme <FaDownload /></button>
             )}
         </main>
     )

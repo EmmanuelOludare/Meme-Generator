@@ -1,14 +1,48 @@
-* {
+:root {
+  --body-bg: #242424;
+  --text-color: #fff;
+  --main-bg: #fff;
+}
+
+[data-theme="dark"] {
+  --body-bg: #fff;
+  --text-color: #242424;
+  --main-bg: #242424;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Karla", sans-serif;
-  margin: 0;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.App {
+  color: var(--text-color);
+  background-color: var(--body-bg);
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  max-width: 550px;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  background-color: var(--main-bg);
+  min-height: 100vh;
 }
 
 main {
-  padding: 36px;
+  padding: 20px;
 }
 
 .header {
@@ -16,7 +50,7 @@ main {
   align-items: center;
   height: 65px;
   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
-  color: white;
+  color: var(--text-color);
   padding: 20px;
 }
 
@@ -30,9 +64,10 @@ main {
   margin-right: auto;
 }
 
-.header--project {
-  font-size: 0.75rem;
+.toggle {
+  font-size: 1.5rem;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .form {
@@ -54,7 +89,7 @@ main {
   font-family: "Karla", sans-serif;
   border-radius: 5px;
   background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
-  color: white;
+  color: var(--text-color);
   border: none;
   cursor: pointer;
 }
@@ -92,4 +127,20 @@ main {
 
 .top {
   top: 0;
+}
+
+.download--button {
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 5px;
 }

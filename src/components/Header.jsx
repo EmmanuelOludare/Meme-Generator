@@ -1,12 +1,14 @@
-const Header = () => {
+import { FaToggleOn } from "react-icons/fa";
+
+const Header = (props) => {
     return (
         <header className="header">
             <img 
-                src="./images/troll-face.png" 
+                src="./src/images/troll-face.webp" 
                 className="header--image"
             />
             <h2 className="header--title">Meme Generator</h2>
-            <h4 className="header--project">React Course - Project 3</h4>
+            <FaToggleOn onClick={props.switchTheme} className="toggle"/>
         </header>
     )
 }
