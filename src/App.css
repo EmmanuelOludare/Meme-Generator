@@ -46,39 +46,24 @@ main {
   font-size: 1.25rem;
   margin-right: auto;
   color: black;
+  transition: all 0.4s;
 }
 
 #toggle {
   position: absolute;
-  height: 20px;
-  width: 40px;
+  height: 27px;
+  width: 27px;
   right: 20px;
-  border: solid 2px white;
+  border: solid 2px black;
   border-radius: 20px;
-}
-
-#toggle:before {
-  position: absolute;
-  content: "";
-  height: 14px;
-  width: 14px;
-  left: 1px;
-  top: 1px;
-  border: solid 2px white;
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: white;
+  content: url(./components/images/dark-mode.png);
   transition: 0.4s;
+  cursor: pointer;
 }
 
 #toggle.active {
-  border-color: black;
-}
-
-#toggle.active:before {
-  left: 21px;
-  background-color: black;
-  border-color: black;
+  border-color: white;
+  content: url(./components/images/light-mode.png);
 }
 
 .night {
@@ -112,6 +97,7 @@ main {
   color: black;
   border: none;
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 .form--button.night--text {
@@ -153,6 +139,15 @@ main {
   top: 0;
 }
 
+.status--text {
+  color: white;
+  transition: all 0.4s;
+}
+
+.status--text.night-status-text {
+  color: black;
+}
+
 .download--button {
   font-family: "Karla", sans-serif;
   border-radius: 5px;
@@ -167,6 +162,7 @@ main {
   justify-content: center;
   gap: 5px;
   margin-top: 5px;
+  transition: all 0.4s;
 }
 
 .download--button.night--text {

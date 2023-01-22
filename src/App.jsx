@@ -10,6 +10,7 @@ function App() {
       document.querySelector(".header--title").classList.toggle("night--text");
       document.querySelector(".form--button").classList.toggle("night--text");
       document.querySelector(".download--button").classList.toggle("night--text");
+      document.querySelector(".status--text").classList.toggle("night-status-text");
   }
 
   return (

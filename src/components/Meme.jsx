@@ -89,7 +89,7 @@ const Meme = () => {
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
             {isDownloading ? (
-              <p>Downloading...</p>
+              <p className='status--text'>Downloading...</p>
             ) : (
               <button className="download--button" onClick={handleDownload}>Download Meme <FaDownload /></button>
             )}
