@@ -1,10 +1,11 @@
 import { FaToggleOn } from "react-icons/fa";
+import trollFace from "./images/troll-face.webp"
 
 const Header = (props) => {
     return (
         <header className="header">
             <img 
-                src="./src/images/troll-face.jpg" 
+                src={trollFace}
                 className="header--image"
             />
             <h2 className="header--title">Meme Generator</h2>
