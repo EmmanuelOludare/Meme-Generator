@@ -33,7 +33,7 @@ main {
   display: flex;
   align-items: center;
   height: 65px;
-  background: linear-gradient(90deg, #a626d3 100%, #672280 1.18%);
+  background: linear-gradient(90deg, #03c03c 100%, #00693e 1.18%);
   padding: 20px;
 }
 
@@ -54,16 +54,16 @@ main {
   height: 27px;
   width: 27px;
   right: 20px;
-  border: solid 2px black;
+  border: solid 2px white;
   border-radius: 20px;
-  content: url(./components/images/dark-mode.png);
+  content: url(./components/images/light-mode.png);
   transition: 0.4s;
   cursor: pointer;
 }
 
 #toggle.active {
-  border-color: white;
-  content: url(./components/images/light-mode.png);
+  border-color: black;
+  content: url(./components/images/dark-mode.png);
 }
 
 .night {
@@ -93,7 +93,7 @@ main {
   grid-column: 1 / -1;
   font-family: "Karla", sans-serif;
   border-radius: 5px;
-  background: linear-gradient(90.41deg, #a818da 100%, #711f8d 1.14%);
+  background: linear-gradient(90deg, #03c03c 100%, #00693e 1.18%);
   color: black;
   border: none;
   cursor: pointer;
@@ -151,7 +151,7 @@ main {
 .download--button {
   font-family: "Karla", sans-serif;
   border-radius: 5px;
-  background: linear-gradient(90.41deg, #a818da 100%, #711f8d 1.14%);
+  background: linear-gradient(90deg, #03c03c 100%, #00693e 1.18%);
   color: black;
   border: none;
   cursor: pointer;
