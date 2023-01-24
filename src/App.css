@@ -10,7 +10,12 @@ body {
   font-family: "Karla", sans-serif;
   font-weight: 700;
   font-size: 1.15rem;
-  background-color: beige;
+  background-color: white;
+  transition: all 0.4s;
+}
+
+.body-day {
+  background-color: black;
 }
 
 .App {

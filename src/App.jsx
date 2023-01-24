@@ -1,10 +1,10 @@
 import Header from "./components/Header"
 import Meme from "./components/Meme"
 import './App.css'
-import useLocalStorage from 'use-local-storage'
 
 function App() {
     const toggle = () => {
+      document.body.classList.toggle("body-day");
       document.getElementById("toggle").classList.toggle("active");
       document.querySelector(".App").classList.toggle("night");
       document.querySelector(".header--title").classList.toggle("night--text");
